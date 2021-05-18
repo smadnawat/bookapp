@@ -7,7 +7,6 @@
       <th scope="col">Author</th>
       <th scope="col">Published</th>
       <th scope="col">Actions</th>
-      <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
@@ -17,8 +16,7 @@
 	      <td><%=book.name&.titleize%></td>
 	      <td><%=book.author_name&.titleize%></td>
 	      <td><%=book.publish_year%></td>
-	      <td><%=link_to "Edit", edit_book_path(book) %></td>
-	      <td><%=link_to "Delete", book_path(book), method: "DELETE", data: {confirm: "Are you sure?"} %></td>
+	      <td><%=link_to "Edit", edit_book_path(book) %> | <%=link_to "Delete", book_path(book), method: "DELETE", data: {confirm: "Are you sure?"} %></td>
 	    </tr>
 	  <% end %>
   </tbody>
